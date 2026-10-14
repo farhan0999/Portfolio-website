@@ -292,12 +292,48 @@ ul, ol {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--text);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
 }
 
-.logo span {
+.logo:hover {
+  opacity: 0.95;
+}
+
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.logo-badge svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logo:hover .logo-badge {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 16px rgba(198, 255, 74, 0.3);
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.logo-text span {
   color: var(--accent);
 }
 
@@ -1249,6 +1285,15 @@ ul, ol {
 }
 
 @media (max-width: 640px) {
+  .logo-badge {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
   .container {
     padding: 0 18px;
   }

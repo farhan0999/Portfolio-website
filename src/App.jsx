@@ -376,8 +376,19 @@ export default function App() {
       {/* Sticky Header */}
       <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
         <div className="container header-inner">
-          <a href="#home" className="logo">
-            PORTFOLIO<span>.</span>
+          <a href="#home" className="logo" aria-label="Muhammad Farhan Portfolio">
+            <span className="logo-badge">
+              <svg viewBox="0 0 512 512" width="28" height="28" fill="none">
+                <rect x="20" y="20" width="472" height="472" rx="112" fill="#141712" stroke="#c6ff4a" strokeWidth="18" strokeOpacity="0.45" />
+                <path d="M152 172 L88 256 L152 340" fill="none" stroke="#FFFFFF" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M208 152 L208 360" fill="none" stroke="#c6ff4a" strokeWidth="40" strokeLinecap="round" />
+                <path d="M208 172 L324 172" fill="none" stroke="#c6ff4a" strokeWidth="40" strokeLinecap="round" />
+                <path d="M208 260 L288 260" fill="none" stroke="#c6ff4a" strokeWidth="36" strokeLinecap="round" />
+                <path d="M360 172 L424 256 L360 340" fill="none" stroke="#FFFFFF" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="320" cy="356" r="16" fill="#c6ff4a" />
+              </svg>
+            </span>
+            <span className="logo-text">FARHAN<span>.</span></span>
           </a>
 
           <nav className="desktop-nav">
