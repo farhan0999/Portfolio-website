@@ -1,42 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141712" />
-      <stop offset="100%" stop-color="#080907" />
+      <stop offset="0%" stop-color="#161b13" />
+      <stop offset="50%" stop-color="#11140e" />
+      <stop offset="100%" stop-color="#0a0c08" />
     </linearGradient>
-    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d7ff73" />
-      <stop offset="100%" stop-color="#c6ff4a" />
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d7ff73" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#c6ff4a" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#8fd426" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eaff9e" />
+      <stop offset="35%" stop-color="#c6ff4a" />
+      <stop offset="100%" stop-color="#a6f024" />
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feGaussianBlur stdDeviation="12" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Squircle Base Container -->
-  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" stroke="#c6ff4a" stroke-width="12" stroke-opacity="0.3" />
+  <!-- Squircle Base Container with Dual Border Aura -->
+  <rect x="20" y="20" width="472" height="472" rx="116" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="14" />
 
-  <!-- Subtle Radial Aura -->
-  <circle cx="256" cy="256" r="180" fill="#c6ff4a" opacity="0.06" filter="url(#glow)" />
+  <!-- Subtle Radial Ambient Glow -->
+  <circle cx="256" cy="256" r="160" fill="#c6ff4a" opacity="0.08" filter="url(#glow)" />
 
-  <!-- Monogram Mark: Geometric Modern Developer MF Insignia -->
+  <!-- Monogram Mark: Perfectly Centered Developer Insignia -->
   <g id="logo-mark">
     <!-- Left Bracket < in Clean Crisp White -->
-    <path d="M152 172 L88 256 L152 340" fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M140 168 L80 256 L140 344" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" />
 
-    <!-- Center Geometric F (Farhan) in Neon Lime with Terminal Tech Cuts -->
+    <!-- Center Geometric F (Farhan) in Signature Neon Volt -->
     <!-- Vertical Spine -->
-    <path d="M208 152 L208 360" fill="none" stroke="url(#limeGrad)" stroke-width="40" stroke-linecap="round" />
+    <path d="M198 154 L198 358" fill="none" stroke="url(#limeGrad)" stroke-width="36" stroke-linecap="round" />
     <!-- Top Bar -->
-    <path d="M208 172 L324 172" fill="none" stroke="url(#limeGrad)" stroke-width="40" stroke-linecap="round" />
+    <path d="M198 174 L314 174" fill="none" stroke="url(#limeGrad)" stroke-width="36" stroke-linecap="round" />
     <!-- Mid Crossbar -->
-    <path d="M208 260 L288 260" fill="none" stroke="url(#limeGrad)" stroke-width="36" stroke-linecap="round" />
+    <path d="M198 256 L284 256" fill="none" stroke="url(#limeGrad)" stroke-width="32" stroke-linecap="round" />
 
-    <!-- Right Closing Bracket / Tag in Clean Crisp White -->
-    <path d="M360 172 L424 256 L360 340" fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Right Closing Bracket > in Clean Crisp White -->
+    <path d="M372 168 L432 256 L372 344" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" />
 
-    <!-- Accent Dot / Dot Indicator in Signature Volt Green -->
-    <circle cx="320" cy="356" r="16" fill="#c6ff4a" filter="url(#glow)" />
+    <!-- Accent Dot in Signature Volt Green -->
+    <circle cx="314" cy="358" r="15" fill="#c6ff4a" filter="url(#glow)" />
   </g>
 </svg>

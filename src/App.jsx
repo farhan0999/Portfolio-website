@@ -379,13 +379,20 @@ export default function App() {
           <a href="#home" className="logo" aria-label="Muhammad Farhan Portfolio">
             <span className="logo-badge">
               <svg viewBox="0 0 512 512" width="28" height="28" fill="none">
-                <rect x="20" y="20" width="472" height="472" rx="112" fill="#141712" stroke="#c6ff4a" strokeWidth="18" strokeOpacity="0.45" />
-                <path d="M152 172 L88 256 L152 340" fill="none" stroke="#FFFFFF" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M208 152 L208 360" fill="none" stroke="#c6ff4a" strokeWidth="40" strokeLinecap="round" />
-                <path d="M208 172 L324 172" fill="none" stroke="#c6ff4a" strokeWidth="40" strokeLinecap="round" />
-                <path d="M208 260 L288 260" fill="none" stroke="#c6ff4a" strokeWidth="36" strokeLinecap="round" />
-                <path d="M360 172 L424 256 L360 340" fill="none" stroke="#FFFFFF" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="320" cy="356" r="16" fill="#c6ff4a" />
+                <defs>
+                  <linearGradient id="navLimeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#eaff9e" />
+                    <stop offset="40%" stopColor="#c6ff4a" />
+                    <stop offset="100%" stopColor="#9ee81f" />
+                  </linearGradient>
+                </defs>
+                <rect x="20" y="20" width="472" height="472" rx="116" fill="#141811" stroke="#c6ff4a" strokeWidth="16" strokeOpacity="0.4" />
+                <path d="M140 168 L80 256 L140 344" fill="none" stroke="#FFFFFF" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M198 154 L198 358" fill="none" stroke="url(#navLimeGrad)" strokeWidth="36" strokeLinecap="round" />
+                <path d="M198 174 L314 174" fill="none" stroke="url(#navLimeGrad)" strokeWidth="36" strokeLinecap="round" />
+                <path d="M198 256 L284 256" fill="none" stroke="url(#navLimeGrad)" strokeWidth="32" strokeLinecap="round" />
+                <path d="M372 168 L432 256 L372 344" fill="none" stroke="#FFFFFF" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="314" cy="358" r="15" fill="#c6ff4a" />
               </svg>
             </span>
             <span className="logo-text">FARHAN<span>.</span></span>
@@ -402,7 +409,7 @@ export default function App() {
           </nav>
 
           <div className="header-actions">
-            <a href="#contact" className="btn btn-primary" onClick={handleRipple} style={{ padding: '10px 22px', fontSize: '13px' }}>
+            <a href="#contact" className="btn btn-primary nav-cta" onClick={handleRipple} style={{ padding: '10px 22px', fontSize: '13px' }}>
               <span className="btn-ripple__content">LET'S TALK</span>
             </a>
             <button
@@ -424,6 +431,11 @@ export default function App() {
           <a href="#projects" onClick={() => setMobileMenuOpen(false)}>PROJECTS</a>
           <a href="#resume" onClick={() => setMobileMenuOpen(false)}>RESUME</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)}>CONTACT</a>
+          <div className="mobile-nav-cta">
+            <a href="#contact" className="btn btn-primary" onClick={(e) => { handleRipple(e); setMobileMenuOpen(false); }} style={{ width: '100%', justifyContent: 'center' }}>
+              <span className="btn-ripple__content">LET'S TALK →</span>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -439,7 +451,14 @@ export default function App() {
           <div className="container">
             <div className="hero-grid">
               <div className="hero-content">
-                <div className="kicker">AI-Powered Web Developer</div>
+                <div className="status-pill">
+                  <span className="status-beacon">
+                    <span className="status-ping"></span>
+                    <span className="status-dot"></span>
+                  </span>
+                  <span className="status-label">Available for projects</span>
+                </div>
+                <div className="kicker">Front-End & Web Developer</div>
                 <h1 className="hero-title">
                   <span className="hero-line">Hello, I'm a</span>
                   <span className="hero-accent">Junior Web Developer</span>
@@ -830,7 +849,9 @@ export default function App() {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="Scroll to top"
       >
-        ↑
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 15l-6-6-6 6" />
+        </svg>
       </button>
     </>
   );
