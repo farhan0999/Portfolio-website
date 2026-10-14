@@ -392,7 +392,6 @@ export default function App() {
                 <path d="M198 174 L314 174" fill="none" stroke="url(#navLimeGrad)" strokeWidth="36" strokeLinecap="round" />
                 <path d="M198 256 L284 256" fill="none" stroke="url(#navLimeGrad)" strokeWidth="32" strokeLinecap="round" />
                 <path d="M372 168 L432 256 L372 344" fill="none" stroke="#FFFFFF" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="314" cy="358" r="15" fill="#c6ff4a" />
               </svg>
             </span>
             <span className="logo-text">FARHAN<span>.</span></span>
@@ -445,8 +444,6 @@ export default function App() {
         <section id="home" className="hero">
           <div className="hero-glow hero-glow-left" aria-hidden="true"></div>
           <div className="hero-glow hero-glow-right" aria-hidden="true"></div>
-          <div className="crosshair crosshair-tl" aria-hidden="true"></div>
-          <div className="crosshair crosshair-br" aria-hidden="true"></div>
 
           <div className="container">
             <div className="hero-grid">

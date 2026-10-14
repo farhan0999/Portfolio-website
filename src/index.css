@@ -457,44 +457,6 @@ ul, ol {
   right: -5%;
 }
 
-.crosshair {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
-}
-
-.crosshair::before,
-.crosshair::after {
-  content: "";
-  position: absolute;
-  background: rgba(198, 255, 74, 0.35);
-}
-
-.crosshair::before {
-  top: 9px;
-  left: 0;
-  width: 20px;
-  height: 2px;
-}
-
-.crosshair::after {
-  top: 0;
-  left: 9px;
-  width: 2px;
-  height: 20px;
-}
-
-.crosshair-tl {
-  top: 24px;
-  left: 24px;
-}
-
-.crosshair-br {
-  bottom: 24px;
-  right: 24px;
-}
-
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;

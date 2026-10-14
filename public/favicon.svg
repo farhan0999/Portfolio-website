@@ -42,8 +42,5 @@
 
     <!-- Right Closing Bracket > in Clean Crisp White -->
     <path d="M372 168 L432 256 L372 344" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" />
-
-    <!-- Accent Dot in Signature Volt Green -->
-    <circle cx="314" cy="358" r="15" fill="#c6ff4a" filter="url(#glow)" />
   </g>
 </svg>
